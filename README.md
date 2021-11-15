@@ -4,7 +4,7 @@
 
 install the req
 ```bash
-pip install -r requirment.txt
+pip install -r requirements.txt
 ```
 
 download the data from
