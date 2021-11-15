@@ -21,20 +21,24 @@ dvc init
 ```bash
 some of the file will be created like .dvc , .dvcignore etc
 ```
-
+```bash
 dvc add data_given\winequality.csv
-```bash
-we are adding the data
 ```
 
-git add .
+we are adding the data
+
+
 ```bash
-whatever given in current dir add to the staging area
+git add .
 ```
+whatever given in current dir add to the staging area
+
 
 git commit -m "first commit"
 
-git add . && git commit -m "pass the msg"
+```bash
+git add . && git commit -m "update readme.md"
+```
 
 Create a git Repo
 
