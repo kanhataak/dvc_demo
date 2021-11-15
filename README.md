@@ -28,3 +28,5 @@ git add .
 ```bash
 whatever given in current dir add to the staging area
 ```
+
+git commit -m "first commit"
