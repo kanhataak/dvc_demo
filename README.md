@@ -11,16 +11,16 @@ pip install -r requirements.txt
 ```
 
 download the data from
-
+```bash
 git init   
-```bash
+```
 when we enter then see all green 
-```
 
-dvc init  
 ```bash
-some of the file will be created like .dvc , .dvcignore etc
+dvc init  
 ```
+some of the file will be created like .dvc , .dvcignore etc
+
 ```bash
 dvc add data_given\winequality.csv
 ```
