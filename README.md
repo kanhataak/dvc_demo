@@ -30,3 +30,6 @@ whatever given in current dir add to the staging area
 ```
 
 git commit -m "first commit"
+
+git add . && git commit -m "pass the msg"
+
