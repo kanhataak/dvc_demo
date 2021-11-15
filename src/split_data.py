@@ -1,4 +1,4 @@
-#  split the raw data
+#  split the raw_data
 #  save it in data\processed folder
 
 import os
