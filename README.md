@@ -1,4 +1,7 @@
  create env
+ ```bash
+ conda create -n mlopswinq python=3.7 -y
+ ```
 
 
 
@@ -39,6 +42,10 @@ git remote add origin https://github.com/kanhataak/dvc_demo.git
 
 Till this point we are in master branch so we have to change it in main branch below command
 
+```bash
 git branch -M main
+```
 
+```bash
 git push origin main
+```
