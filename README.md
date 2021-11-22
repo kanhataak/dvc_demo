@@ -33,8 +33,9 @@ git add .
 ```
 whatever given in current dir add to the staging area
 
-
+```bash
 git commit -m "first commit"
+```
 
 ```bash
 git add . && git commit -m "update readme.md"
