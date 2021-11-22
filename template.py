@@ -18,7 +18,6 @@ files = [
     "params.yaml",
     ".gitignore",  #all the things we wont like to push on github those file name we keep inside it. 
     os.path.join("src","__init__.py"), #read as python package
-    "README.md"
 ]
 
 for file_ in files:
