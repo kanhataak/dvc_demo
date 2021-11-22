@@ -54,3 +54,43 @@ git branch -M main
 ```bash
 git push origin main
 ```
+In order to reproduce the all stages from dvc.yaml file excute the below command
+
+```bash
+dvc repro
+```
+In order to track that how your model is behaving use below command
+
+```bash
+ dvc metrics show
+ ```
+To check the difference of the performance of the model
+
+```bash
+dvc metrics diff
+```
+for testing are using tox am
+
+create your own library
+
+```bash
+ python setup.py sdist bdist_wheel
+ ```
+tox command
+```bash
+tox
+```
+for rebuilding
+
+```bash
+tox -r
+```
+pytest
+
+```bash
+pytest -c
+```
+setup command
+```bash
+pip install -e .
+```
