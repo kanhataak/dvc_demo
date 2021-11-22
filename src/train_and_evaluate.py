@@ -12,6 +12,11 @@ from sklearn.linear_model import ElasticNet
 from get_data import read_params
 from urllib.parse import urlparse 
 
+def eval_metrics(actual, pred):
+    rmse = np.sqrt(mean_squared_error(actual, pred))
+    mae = mean_absolute_error(actual, pred)
+    r2 = r2_score(actual, pred)
+    return rmse, mae, r2
 
 def train_and_evaluate(config_path):
     config = read_params(config_path)
@@ -40,17 +45,19 @@ def train_and_evaluate(config_path):
 
     lr.fit(train_x, train_y) 
     predicted_qualities = lr.predict(test_x)
-    mae = mean_absolute_error(test_y, predicted_qualities)
-    mse = mean_squared_error(test_y, predicted_qualities)
+    rmse, mae, r2 = eval_metrics(test_y, predicted_qualities)
+    print("RMSE: {}".format(rmse))
     print("MAE: {}".format(mae))
-    print("MSE: {}".format(mse))
+    print("R2: {}".format(r2))
+
     score_file = config['reports']["scores"]
     params_file = config['reports']['params']
 
     with open(score_file,"w") as f:
         score = {
+            "rmse": rmse,
             "mae": mae,
-            "mse": mse
+            "r2": r2
         }
         json.dump(score,f,indent=4)
 
