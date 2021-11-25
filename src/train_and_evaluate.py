@@ -46,9 +46,9 @@ def train_and_evaluate(config_path):
     lr.fit(train_x, train_y) 
     predicted_qualities = lr.predict(test_x)
     rmse, mae, r2 = eval_metrics(test_y, predicted_qualities)
-    print("RMSE: {}".format(rmse))
-    print("MAE: {}".format(mae))
-    print("R2: {}".format(r2))
+    print("RMSE: %s" % rmse)
+    print("MAE: %s" % mae)
+    print("R2: %s" % r2)
 
     score_file = config['reports']["scores"]
     params_file = config['reports']['params']
@@ -63,8 +63,8 @@ def train_and_evaluate(config_path):
 
     with open(params_file,"w") as f:
         params = {
-            "alpha":alpha,
-            "l1_ration":l1_ratio
+            "alpha": alpha,
+            "l1_ration": l1_ratio
         }
         json.dump(params,f,indent=4)
 
@@ -79,4 +79,3 @@ if __name__=="__main__":
     args.add_argument("--config", default="params.yaml")
     parsed_args = args.parse_args()
     train_and_evaluate(config_path=parsed_args.config)
-

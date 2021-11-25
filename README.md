@@ -1,6 +1,6 @@
  create env
  ```bash
- conda create -n mlopswinq python=3.7 -y
+ conda create -n env_name python=3.7 -y
  ```
 
 
@@ -59,7 +59,7 @@ In order to reproduce the all stages from dvc.yaml file excute the below command
 ```bash
 dvc repro
 ```
-In order to track that how your model is behaving use below command
+In order to track that how your model is behaving
 
 ```bash
  dvc metrics show
