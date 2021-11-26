@@ -94,3 +94,24 @@ setup command
 ```bash
 pip install -e .
 ```
+
+tox command -
+```bash
+tox
+```
+for rebuilding -
+```bash
+tpx -r
+```
+pytest commamd
+```bash
+pytest -v
+```
+setup commands -
+```bash
+pip install -e .
+```
+ if build your own package commands-
+ ```bash
+ python setup.py sdist bdist wheel
+ ```
